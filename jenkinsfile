@@ -1,0 +1,16 @@
+pipeline{
+    node {label: 'ltecomm'}
+    stages{
+        stage('SCM'){
+            steps{
+                git branch: 'main', url: 'https://github.com/apatel-tech/spring-petclinic'
+            }
+        }
+        stage('BUILD'){
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+    
+    }
+}
