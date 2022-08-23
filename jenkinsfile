@@ -1,5 +1,5 @@
 pipeline{
-    node{label: 'ltecom'}
+    agent {label: 'ltecom'}
     stages{
         stage('SCM'){
             steps{
