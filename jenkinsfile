@@ -1,5 +1,5 @@
 pipeline{
-    node {label: 'ltecomm'}
+    node{label: 'ltecom'}
     stages{
         stage('SCM'){
             steps{
@@ -11,6 +11,5 @@ pipeline{
                 sh 'mvn clean package'
             }
         }
-    
     }
 }
